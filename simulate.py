@@ -32,7 +32,7 @@ def get_cards(num_cards, stage, seen_cards):
         if user_input == "new" or user_input == "reset":
             return user_input
         try:
-            cards = user_input.replace("10", "T").split(" ")
+            cards = user_input.upper().replace("10", "T").split(" ")
             if len(cards) not in num_cards:
                 print("Invalid input: invalid number of cards")
                 raise ValueError
