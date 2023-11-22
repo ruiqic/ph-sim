@@ -1,4 +1,5 @@
 import random
+import numpy as np
 from constants import RANKS, SUITS
 from phevaluator import evaluate_cards
 
@@ -42,7 +43,7 @@ def play_game(num_players, hole, community, deck, verbose=False):
         for i in range(num_players-1):
             print(f"Player {i} hand:", players[i], player_scores[i])
 
-    return my_score <= min(player_scores)
+    return (my_score <= np.minimum.accumulate(player_scores)).astype(int)
 
 
 
