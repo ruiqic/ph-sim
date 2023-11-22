@@ -50,7 +50,7 @@ def get_cards(num_cards, stage, seen_cards):
 
 def main():
     while True:
-        print("----------------------------- New Game (♣c, ♦d, ♥h, ♠s) -----------------------------")
+        print("----------------------------- New Game (red: ♦d, ♥h) (black: ♣c, ♠s) -----------------------------")
         community = []
         num_players = get_num_players()
         if num_players is None:
