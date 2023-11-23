@@ -53,20 +53,19 @@ def print_probabilities(prob):
     probs_text = []
     random_text = []
     for i in range(len(pretty_prob)):
-        probs_text.append(f"{i+2}: {pretty_prob[i]:.2f}%")
-        random_text.append(f"{i+2}: {pure_random[i]:.2f}%")
+        probs_text.append(f"{i+2}: {pretty_prob[i]:5.2f}%")
+        random_text.append(f"{i+2}: {pure_random[i]:5.2f}%")
     print("Random: ", "; ".join(random_text))
     print("Equity: ", "; ".join(probs_text))
     
 
 def main():
     while True:
-        print("----------------------------- New Game (red: ♦d, ♥h) (black: ♣c, ♠s) -----------------------------")
-        
         num_players = get_num_players()
         if num_players is None:
             continue
         while True:
+            print("----------------------------- New Game (red: ♦d, ♥h) (black: ♣c, ♠s) -----------------------------")
             community = []
             hole = get_cards(num_cards=[2], stage="hole", seen_cards=[])
             if hole == "reset":
