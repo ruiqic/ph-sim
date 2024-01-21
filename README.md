@@ -3,14 +3,14 @@ Poker Hand Simulator
 A very fast poker odds calculator. Estimates the probability of winning given the available information (hole cards and community cards) in a poker game. The estimation leverages a [perfect hash algorithm](https://github.com/HenryRLee/PokerHandEvaluator/blob/master/Documentation/Algorithm.md) to run simulations efficiently.
 
 ## Requirements
-Simulations use [phevaluator](https://github.com/HenryRLee/PokerHandEvaluator) and the progress bar uses `tqdm`.
+Simulations use [phevaluator](https://github.com/HenryRLee/PokerHandEvaluator), the progress bar uses `tqdm`, and some array operations use `numpy`.
 
 ## Usage
 To run
 ```
 python simulate.py
 ```
-Next, enter the number of players and cards when prompted to run simulations.
+Next, when prompted, enter the number of players or cards.
 <pre>
 Enter number of players: <b>8</b>
 ----------------------------- New Game (red: ♦d, ♥h) (black: ♣c, ♠s) -----------------------------
